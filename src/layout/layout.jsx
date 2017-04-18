@@ -1,3 +1,6 @@
+import IndexPage from '../pages/index';
+import Menu from '../components/menu';
+
 export default class MainLayout extends React.Component {
 
    constructor(props) {
@@ -6,7 +9,7 @@ export default class MainLayout extends React.Component {
 
    render() {
       return (
-          <div>
+          <div className="container">
              <nav class="navbar navbar-inverse">
                 <div class="container">
                    <div class="navbar-header">
@@ -22,14 +25,11 @@ export default class MainLayout extends React.Component {
                       </a>
                    </div>
                    <div id="navbar" class="collapse navbar-collapse">
-                      { this.props.menu }  /*component*/
+                      <Menu />
                    </div>
                 </div>
              </nav>
-
-             <div class="container">
-                { this.props.children }    /*page*/
-             </div>
+             <IndexPage />
           </div>
       );
    }

@@ -1,9 +1,28 @@
+import MenuItem from './menuItem';
+
+const menu = [
+   {
+      label: 'Данные',
+      link: '/data'
+   },
+   {
+      label: 'Статистика',
+      link: '/static'
+   },
+   {
+      label: 'Контакты',
+      link: '/contacts'
+   }
+];
+
 export default class Menu extends React.Component{
+   constructor(props) {
+      super(props)
+   }
+
    render() {
       return (
-          <ul class="nav navbar-nav">
-             { this.props.children }
-          </ul>
+          <MenuItem link={menu} />
       )
    }
 }

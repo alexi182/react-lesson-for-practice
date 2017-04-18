@@ -4,9 +4,12 @@ export default class MenuItem extends React.Component {
    render() {
       return (
           <ul className="nav navbar-nav">
-             <li className="active">
-                <Link to = {this.props.href}> {this.props.name} </Link>
-             </li>
+
+             {this.props.link.map((item, index) =>
+                 <li key={index}>
+                    <Link to={item.link}> {item.label} </Link>
+                 </li>
+             )}
           </ul>
       );
    }

@@ -1,7 +1,3 @@
-import MainLayout from '../layout/layout';
-import Menu from '../components/menu';
-import MenuItem from '../components/menuItem';
-
 export default class IndexPage extends React.Component {
    constructor(props) {
       super(props);
@@ -9,8 +5,8 @@ export default class IndexPage extends React.Component {
 
    render() {
       return (
-         <div>
-            Привет!
+         <div className="container">
+            {this.props.children}
          </div>
       );
    }
